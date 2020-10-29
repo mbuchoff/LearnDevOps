@@ -23,12 +23,9 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: true
-
-- task: CmdLine@2
-  inputs:
-    script: 'ls -al'
+    arguments: '--output publish'
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: 'bin/Debug/net5.0/publish/' 
-    artifactName: 'myWebsiteName'
+    pathtoPublish: 'publish/' 
+    artifactName: 'learnDevOps'
