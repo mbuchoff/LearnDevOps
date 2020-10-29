@@ -24,6 +24,10 @@ steps:
     command: 'publish'
     publishWebProjects: true
 
+- task: CmdLine@2
+  inputs:
+    script: 'dir /s /b'
+
 - task: PublishBuildArtifacts@1
   inputs:
     pathtoPublish: 'bin/Debug/net5.0/publish/' 
