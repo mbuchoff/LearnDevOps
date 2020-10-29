@@ -11,14 +11,14 @@ pool:
 
 steps:
 
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'build'
-    projects: 'learnDevOps.csproj'
-
 - task: UseDotNet@2
   displayName: 'Use .NET Core sdk'
   inputs:
     packageType: sdk
     version: 5.0
     installationPath: $(Agent.ToolsDirectory)/dotnet
+    
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: 'learnDevOps.csproj'
