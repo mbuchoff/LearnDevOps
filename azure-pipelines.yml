@@ -15,3 +15,10 @@ steps:
   inputs:
     command: 'build'
     projects: 'learnDevOps.csproj'
+
+- task: UseDotNet@2
+  displayName: 'Use .NET Core sdk'
+  inputs:
+    packageType: sdk
+    version: 5.0
+    installationPath: $(Agent.ToolsDirectory)/dotnet
